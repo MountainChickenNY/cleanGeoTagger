@@ -7,7 +7,7 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + './../dist'));
 
 
-
+// app.get('/');
 
 app.listen(3000, (err, res) => {
 	if (err) return err;

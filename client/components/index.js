@@ -10,6 +10,8 @@ import {
 } from 'react-router-dom';
 
 import Login from './Login.js';
+import Tagger from './Tagger.js';
+import Navbar from './Navbar.js';
 
 
 class App extends React.Component {
