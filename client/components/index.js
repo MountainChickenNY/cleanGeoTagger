@@ -10,7 +10,7 @@ import {
 } from 'react-router-dom';
 
 import Login from './Login.js';
-import Feed from './Feed.js';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -22,7 +22,7 @@ class App extends React.Component {
       <Router>
         <div>
           <Route exact path="/" component={Login} />
-          <Route path="/feed" component={Feed} />
+          {/* <Route path="/feed" component={Feed} /> */}
         </div>
       </Router>
     )
