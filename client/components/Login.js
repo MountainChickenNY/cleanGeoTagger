@@ -25,7 +25,6 @@ class Login extends React.Component {
 
         return (
             <div>
-                <Navbar />
                 <input type="text" name="username" id="userInput" defaultValue="Username"/>
                 <input type="text" name="password" id="passwordInput" defaultValue="Password"/>
                 <button>Login</button>

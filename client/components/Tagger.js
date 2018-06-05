@@ -33,7 +33,7 @@ class Tagger extends Component {
 	}
 
 	handleDisplay(value) {
-		let selectedDatas = this.state.datas.filter( (data) => {
+		let selectedDatas = this.state.datas.filter( function(data){
 			for(let i = 0; i < data.tags.length; i++) {
 				if(data.tags[i] === value) {
 					return true;
@@ -63,14 +63,14 @@ class Tagger extends Component {
       headers:{
         'Content-Type': 'application/json'
       }
-    }).then(res => {
+    }).then(function(res) {
       return res.json()
-    }).catch(error => {
+    }).catch(function(error) {
 			console.error('Error:', error)
 			that.setState({
 				datas: datas.concat(response)
 			});
-		}).then(response => {
+		}).then(function(response) {
 			console.log('after google response: ', response);
 			that.setState({
 				datas : datas.concat(response)
@@ -95,7 +95,8 @@ class Tagger extends Component {
   render(){
 	const { datas, displayDatas } = this.state;
     return (
-      <div>
+      <div className="jumbotron">
+      	<h1>Search</h1>
         <DataCreate onClick={this.handleClickSave}/>
         <DataDisplay datas={datas} displayDatas={displayDatas} onChange={this.handleChange}/>
       </div>

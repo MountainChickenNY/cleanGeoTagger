@@ -11,13 +11,13 @@ class DataCreate extends Component {
     };
   }
 
-  handleChange (e){
+  handleChange = (e) => {
     let nextState = {};
     nextState[e.target.name] = e.target.value;
     this.setState(nextState);
   }
 
-  handleClickSave (){
+  handleClickSave = () => {
     const { name, tag, tagCount } = this.state;
     let data = {};
     let tags = [tag];
@@ -35,15 +35,16 @@ class DataCreate extends Component {
       tag: '',
       tagCount: 0
     });
+    
     this.props.onClick(data);
   }
 
-  // handleClickPlus = () => {
-  //   let updateTagCount = this.state.tagCount+1;
-  //   this.setState({
-  //     tagCount: updateTagCount
-  //   });
-  // }
+  handleClickPlus = () => {
+    let updateTagCount = this.state.tagCount+1;
+    this.setState({
+      tagCount: updateTagCount
+    });
+  }
   
   render(){
     const { tagCount } = this.state;
