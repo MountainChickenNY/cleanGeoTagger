@@ -8,17 +8,19 @@ import {
 	withRouter
 } from 'react-router-dom';
 
-import Tagger from './Tagger.js';
-import Navbar from './Navbar.js';
+import Navbar from './Navbar';
+import Tagger from './Tagger';
 
 class Login extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            userLogging: false,
-            userPassword: false,
-            userInfo: undefined
+            username: '',
+            userPassword: '',
+            userVerified: undefined
         }
+        // this.handleChange = this.handleChange.bind(this);
+        // this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     render() {
@@ -28,12 +30,16 @@ class Login extends React.Component {
                 <Navbar />
                 {/* <div class="jumbotron">
                 <h1>Mountain Chickens Rule!</h1>
+                // <Tagger />
+                </div>
+                <br /> */}
+
                 <Tagger />
-                </div> */}
-                <br />
-                <input type="text" name="username" id="userInput" defaultValue="Username"/>
-                <input type="text" name="password" id="passwordInput" defaultValue="Password"/>
-                <button>Login</button>
+                <br / >
+                <input type="text" class="username" id="userInput" defaultValue="Username"/>
+                <input type="text" class="password" id="passwordInput" defaultValue="Password"/>
+                <button onClick>Login</button>
+                <button>Sign Up</button>
             </div>
         )
     }
