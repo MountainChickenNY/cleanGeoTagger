@@ -3,6 +3,14 @@ import DataCreate from './DataCreate';
 import DataDisplay from './DataDisplay';
 import fetch from 'isomorphic-fetch';
 
+import {
+	BrowserRouter as Router,
+	Route,
+	Link,
+	Redirect,
+	withRouter
+} from 'react-router-dom';
+
 class Tagger extends Component {
   constructor(props) {
     super(props);
@@ -20,11 +28,11 @@ class Tagger extends Component {
 	  };
 	}
 		
-	handleChange = (e) => {
+	handleChange(e) {
 		this.handleDisplay(e.target.value);
 	}
 
-	handleDisplay = (value) => {
+	handleDisplay(value) {
 		let selectedDatas = this.state.datas.filter( (data) => {
 			for(let i = 0; i < data.tags.length; i++) {
 				if(data.tags[i] === value) {
@@ -38,7 +46,7 @@ class Tagger extends Component {
 		});
 	}
 
-  handleClickSave = (data) => {
+  handleClickSave(data) {
     const { datas } = this.state; 
     let addData = {
   		name: data.name,
@@ -70,7 +78,7 @@ class Tagger extends Component {
 		});
 	}
 
-	componentWillMount = () => {
+	componentWillMount() {
 		let that = this;
 		const { datas } = this.state; 
 		fetch('/getResults')
