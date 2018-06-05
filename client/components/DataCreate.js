@@ -11,6 +11,7 @@ class DataCreate extends Component {
     };
   }
 
+
   handleChange = (e) => {
     let nextState = {};
     nextState[e.target.name] = e.target.value;
