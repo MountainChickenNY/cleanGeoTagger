@@ -12,6 +12,7 @@ import {
 import Login from './Login.js';
 import Tagger from './Tagger.js';
 import Navbar from './Navbar.js';
+import Signup from './Signup.js';
 
 
 class App extends React.Component {
@@ -22,11 +23,12 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <div>
+      <div>
           <Navbar />
           <Route exact path="/" component={Tagger} />
           <Route path="/login" component={Login} />
-        </div>
+          <Route path="/signup" component={Signup} />
+      </div>
       </Router>
     )
   }

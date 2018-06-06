@@ -19,6 +19,9 @@ mongoose.connect('mongodb://YanYan123:YanYan789@ds147890.mlab.com:47890/mountain
 }).catch(err => console.log(err));
 
 app.get('/');
+app.get('/login');
+app.get('/signup');
+
 app.get('/getResults', dataController.getData);
 app.post('/addLocation', dataController.googleApiHandler, dataController.postData);
 

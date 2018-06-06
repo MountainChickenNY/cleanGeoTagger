@@ -8,6 +8,7 @@ import {
 	Route,
 	Link,
 	Redirect,
+	StyleSheet,
 	withRouter
 } from 'react-router-dom';
 
@@ -94,14 +95,20 @@ class Tagger extends Component {
 	}
 
 	render(){
-			const { datas, displayDatas } = this.state;
-			return (
-					<div>
-						<DataCreate onClick={this.handleClickSave}/>
-						<DataDisplay datas={datas} displayDatas={displayDatas} onChange={this.handleChange}/>
-					</div>
-			);
+		const { datas, displayDatas } = this.state;
+		return (
+		<div>
+			<div className="jumbotron">
+				<div className="container">
+					<h1 className="header">Search through Google Maps API</h1>
+					<DataCreate onClick={this.handleClickSave}/>
+				</div>
+			</div>
+			<DataDisplay datas={datas} displayDatas={displayDatas} onChange={this.handleChange}/>
+		</div>
+		);
 	}
 }
+
 
 export default Tagger;

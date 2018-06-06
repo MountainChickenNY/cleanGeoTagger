@@ -57,10 +57,10 @@ class DataCreate extends Component {
     }
     return (
       <div className="input-group mb-3">
-        <form>
-          <input type="text" name="name" placeholder="name" value={this.state.name} onChange={this.handleChange} />
+        <form className="form-group">
+          <input className="form-control" type="text" name="name" placeholder="name" value={this.state.name} onChange={this.handleChange} />
           <br />
-          <input className="tag" type="text" name="tag" placeholder="tag" value={this.state.tag} onChange={this.handleChange} />
+          <input className="tag form-control" type="text" name="tag" placeholder="tag" value={this.state.tag} onChange={this.handleChange} />
           {moreTags}
           {/*<button className="btn" onClick={this.handleClickPlus}>+</button>*/}
           <br />
