@@ -24,10 +24,12 @@ class Login extends React.Component {
   render() {
 
     return (
-      <div class="form-group">
-        <input type="text" className="username form-control" id="userInput" placeholder="Username"/>
-        <input type="text" className="password form-control" id="passwordInput" placeholder="Password"/>
-        <button onClick="">Login</button>
+      <div className="container"> 
+        <form className="form-signin">
+          <input type="text" className="username form-control" id="userInput" placeholder="Username"/>
+          <input type="text" className="password form-control" id="passwordInput" placeholder="Password"/>
+          <button onClick="">Login</button>
+        </form>
       </div>
     )
   }
