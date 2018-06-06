@@ -1,3 +1,4 @@
+
 const Data = require('./dataModel');
 //const Data = require('./../db/dataModel');
 
