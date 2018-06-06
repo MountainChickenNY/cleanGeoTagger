@@ -62,7 +62,7 @@ class DataCreate extends Component {
           <br />
           <input className="tag form-control" type="text" name="tag" placeholder="tag" value={this.state.tag} onChange={this.handleChange} />
           {moreTags}
-          {/*<button className="btn" onClick={this.handleClickPlus}>+</button>*/}
+          <a className="btn" onClick={this.handleClickPlus}>+</a>
           <br />
           <button type="submit" className="btn" onClick={this.handleClickSave}>SAVE</button>
         </form>
