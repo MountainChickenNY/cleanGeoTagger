@@ -5,8 +5,8 @@ class DataDisplay extends Component {
   render(){
     const { datas, displayDatas, onChange } = this.props;
     return (
-      <div>
-        Display
+      <div className="container">
+        <h3> Display by Tags </h3>
         <TagDisplay datas={datas} displayDatas={displayDatas} onChange={onChange} />
       </div>
     );

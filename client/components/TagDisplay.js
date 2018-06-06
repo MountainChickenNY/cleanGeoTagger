@@ -23,7 +23,7 @@ class TagDisplay extends Component {
     
     return (
       <div>
-        <select onChange={onChange}>
+        <select className="btn btn-secondary dropdown-toggle" onChange={onChange}>
           <option>-- select a tag --</option>
           {options}
         </select>

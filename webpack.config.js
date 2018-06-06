@@ -14,7 +14,8 @@ const output = {
 module.exports = {
 	mode: 'production', 
 	performance: { hints: false },
-	entry, output,
+	entry, 
+	output,
 	devtool: 'eval-source-map',
 	module: {
 		rules : [

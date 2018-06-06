@@ -11,13 +11,14 @@ class DataCreate extends Component {
     };
   }
 
-  handleChange = (e) =>{
+
+  handleChange = (e) => {
     let nextState = {};
     nextState[e.target.name] = e.target.value;
     this.setState(nextState);
   }
 
-  handleClickSave (){
+  handleClickSave = () => {
     const { name, tag, tagCount } = this.state;
     let data = {};
     let tags = [tag];
@@ -35,15 +36,16 @@ class DataCreate extends Component {
       tag: '',
       tagCount: 0
     });
+    
     this.props.onClick(data);
   }
 
-  // handleClickPlus = () => {
-  //   let updateTagCount = this.state.tagCount+1;
-  //   this.setState({
-  //     tagCount: updateTagCount
-  //   });
-  // }
+  handleClickPlus = () => {
+    let updateTagCount = this.state.tagCount+1;
+    this.setState({
+      tagCount: updateTagCount
+    });
+  }
   
   render(){
     const { tagCount } = this.state;
@@ -55,10 +57,10 @@ class DataCreate extends Component {
     }
     return (
       <div className="input-group mb-3">
-        <form>
-          <input type="text" name="name" placeholder="name" value={this.state.name} onChange={this.handleChange} />
+        <form className="form-group">
+          <input className="form-control" type="text" name="name" placeholder="name" value={this.state.name} onChange={this.handleChange} />
           <br />
-          <input className="tag" type="text" name="tag" placeholder="tag" value={this.state.tag} onChange={this.handleChange} />
+          <input className="tag form-control" type="text" name="tag" placeholder="tag" value={this.state.tag} onChange={this.handleChange} />
           {moreTags}
           {/*<button className="btn" onClick={this.handleClickPlus}>+</button>*/}
           <br />
