@@ -1,4 +1,5 @@
-const Data = require('./DataModel');
+const Data = require('./dataModel');
+//const Data = require('./../db/dataModel');
 
 var googleMapsClient = require('@google/maps').createClient({
     key: 'AIzaSyD-B9yL_qkpkcmHC9G6zE2i-odPFNKoEP4'
@@ -49,6 +50,7 @@ const postData = (req, res) => {
       else res.status(200).send(savedData);
       console.log('Saving to DB')
     });
+   
   }
 
   module.exports = {googleApiHandler, getData, postData};

@@ -8,7 +8,7 @@ const googleMapsClient = require('@google/maps').createClient({
   });
 
 app.use(bodyParser.json());
-app.use(express.static(__dirname + './../dist'));
+app.use(express.static(__dirname + './../dist')); //?
 
 const dataController = require('./dataController');
 
@@ -25,7 +25,7 @@ app.get('/signup');
 app.get('/getResults', dataController.getData);
 app.post('/addLocation', dataController.googleApiHandler, dataController.postData);
 
-app.listen(8080, (err, res) => {
+app.listen(3000, (err, res) => {
 	if (err) return err;
 	console.log('Listening on port 3000');
 });

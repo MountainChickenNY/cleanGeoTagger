@@ -38,6 +38,7 @@ class DataCreate extends Component {
     });
     
     this.props.onClick(data);
+    
   }
 
   handleClickPlus = () => {
