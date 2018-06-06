@@ -78,6 +78,7 @@ class Tagger extends Component {
 						datas : datas.concat(response)
 					});
 				});
+				
 	}
 
 	componentWillMount = () => {

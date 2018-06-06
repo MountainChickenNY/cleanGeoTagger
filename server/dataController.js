@@ -50,6 +50,7 @@ const postData = (req, res) => {
       else res.status(200).send(savedData);
       console.log('Saving to DB')
     });
+   
   }
 
   module.exports = {googleApiHandler, getData, postData};
