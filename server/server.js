@@ -11,7 +11,7 @@ const dataController = require('./dataController');
 const userController = require('./userController');
 
 app.use(bodyParser.json());
-app.use(express.static(__dirname + './../dist'));
+app.use(express.static(__dirname + './../dist')); //?
 
 
 // connect to mongo database
@@ -21,6 +21,9 @@ mongoose.connect('mongodb://YanYan123:YanYan789@ds147890.mlab.com:47890/mountain
 }).catch(err => console.log(err));
 
 app.get('/');
+app.get('/login');
+app.get('/signup');
+
 app.get('/getResults', dataController.getData);
 app.post('/addLocation', dataController.googleApiHandler, dataController.postData);
 app.post('/signup', userController.createUser);
@@ -30,3 +33,4 @@ app.listen(3000, (err, res) => {
 	if (err) return err;
 	console.log('Listening on port 3000');
 });
+

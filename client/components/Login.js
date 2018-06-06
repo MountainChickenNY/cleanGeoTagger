@@ -8,8 +8,6 @@ import {
 	withRouter
 } from 'react-router-dom';
 
-import Navbar from './Navbar';
-import Tagger from './Tagger';
 
 class Login extends React.Component {
     constructor(props) {
@@ -21,7 +19,7 @@ class Login extends React.Component {
         }
         // this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-    }
+  }
 
     handleSubmit(route) {
         //event.preventDefault();
@@ -46,32 +44,17 @@ class Login extends React.Component {
             .catch(err => {
                 console.log('error is : ', err)
             });
-        
-
-        // });
-        // .then(()=>{
-
-        // })
     }
-
-
-
-
 
     render() {
 
         return (
-            <div>
+            <div className="container"> 
                 <Navbar />
 
                 <Tagger />
                 <br / >
-                {/* <input type="text" class="username" id="userInput" defaultValue="Username"/>
-                <input type="text" class="password" id="passwordInput" defaultValue="Password"/>
-                <button onClick>Login</button>
-                <button>Sign Up</button>
 
-                <br /> */}
             
             <form>
                 <label htmlFor="username"></label>
@@ -96,6 +79,5 @@ class Login extends React.Component {
         
         )
     }
-}
 
 export default Login;

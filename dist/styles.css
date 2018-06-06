@@ -1,0 +1,16 @@
+.jumbotron {
+    background-image: url('https://www.vtexperts.com/wp-content/uploads/2016/07/google-map-background-1900x1170.png')
+}
+
+.header {
+    text-shadow: 1px 1px 2px grey;
+}
+
+.navImg {
+    height: 50px;
+}
+
+.btn {
+    color: white !important;
+}
+
