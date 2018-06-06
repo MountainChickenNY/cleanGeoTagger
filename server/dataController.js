@@ -1,4 +1,4 @@
-const Data = require('./DataModel');
+const Data = require('./dataModel.js');
 
 var googleMapsClient = require('@google/maps').createClient({
     key: 'AIzaSyD-B9yL_qkpkcmHC9G6zE2i-odPFNKoEP4'
